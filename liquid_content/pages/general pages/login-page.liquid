@@ -1,0 +1,280 @@
+<style>
+    .cool-animation-hover{
+        position: relative;
+    }
+    .cool-animation-hover > .cool-animation-portal{
+        position: absolute;
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: width ease 1200ms;
+    }
+    .cool-animation-hover:hover > .cool-animation-portal{
+        overflow: hidden;
+        transition: width ease 1200ms;
+        width: 100%;
+        height: 100%;
+        /* box-shadow: 0 0 2px 0px #000; */
+    }
+    .cool-animation-hover > .cool-animation-portal > div{
+        position: absolute;
+        width: 230px;
+        height: 100%;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+    }
+    label.group.active{
+        border-color: #fff !important;
+    }
+</style>
+<section class="freshi4-container flex w-full flex-col relative min-h-[100vh] xl:flex-row">
+    <div class="main-details__wrapper flex flex-col xl:flex-row xl:flex-1 justify-center items-center gap-[38px] sm:gap-[86px] relative z-[1] min-h-[100vh]">
+        <div id="main-details__header" class="flex flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-start gap-6 !px-12 !py-6">
+            <svg width="121" height="120" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M113.5 0C117.366 2.57702e-07 120.5 3.13401 120.5 7V53C120.5 53.61 120.421 54.2015 120.274 54.7656C120.423 56.4906 120.5 58.2364 120.5 60C120.5 93.1371 93.6371 120 60.5 120C27.3629 120 0.5 93.1371 0.5 60C0.5 26.8629 27.3629 0 60.5 0C62.2633 0 64.0088 0.0755925 65.7334 0.224609C66.2977 0.0778838 66.8898 2.54235e-09 67.5 0H113.5Z" fill="#008060"/>
+                <path d="M30.5 60H41.75C45.8921 60 49.25 63.3577 49.25 67.5V86.25C49.25 90.3923 45.8921 93.75 41.75 93.75H30.5C26.3579 93.75 23 90.3923 23 86.25V60C23 39.2893 39.7893 22.5 60.5 22.5C81.2105 22.5 98 39.2893 98 60V86.25C98 90.3923 94.6423 93.75 90.5 93.75H79.25C75.1077 93.75 71.75 90.3923 71.75 86.25V67.5C71.75 63.3577 75.1077 60 79.25 60H90.5C90.5 43.4314 77.0686 30 60.5 30C43.9314 30 30.5 43.4314 30.5 60Z" fill="white"/>
+                <path d="M105.5 5.83334C107.801 5.83334 109.666 7.69883 109.666 10V13.3333C109.666 15.6345 107.801 17.5 105.5 17.5C103.199 17.5 101.333 15.6345 101.333 13.3333V10C101.333 7.69883 103.199 5.83334 105.5 5.83334ZM98.0455 14.1667H99.7255C100.13 16.9936 102.561 19.1667 105.5 19.1667C108.438 19.1667 110.87 16.9936 111.274 14.1667H112.954C112.57 17.643 109.809 20.4033 106.333 20.7876V24.1667H104.666V20.7876C101.19 20.4033 98.4298 17.643 98.0455 14.1667Z" fill="white"/>
+            </svg>
+            <div class="flex flex-col gap-6 sm:gap-[14px] items-center xl:items-start justify-center sm:items-start">
+                <h1 class="!text-[34.83px] sm:!text-[60.192px] !leading-[1.15] !font-['Cormorant_Garamond',sans-serif] !text-[#111111] !text-center xl:!text-left">
+                    <span class="inline-block sm:hidden">
+                        Welcome to
+                    </span>
+                    Freshdesk
+                </h1>
+                <p class="!font-[300] sm:!font-semibold !text-[24.19px] sm:!text-[34.84px] !leading-[1.15] !font-['Open_sans',sans-serif] !text-[#111111] !text-center xl:!text-left">
+                    Customer Support Portal
+                </p>
+            </div>
+        </div>
+        <div id="loginForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full flex flex-col">
+            <div class="fw-form-section w-full flex-1 h-full flex flex-col">
+                <form class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-black xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full" id="new_user_session" novalidate="novalidate" action="/support/login" accept-charset="UTF-8" method="post">
+                    <input name="utf8" type="hidden" value="✓" />
+                    <input type="hidden" name="authenticity_token" value="" />
+                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
+                        <label for="emailInput" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
+                            <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.50001 3H17.5C17.9603 3 18.3333 3.3731 18.3333 3.83333V17.1667C18.3333 17.6269 17.9603 18 17.5 18H2.50001C2.03977 18 1.66667 17.6269 1.66667 17.1667V3.83333C1.66667 3.3731 2.03977 3 2.50001 3ZM16.6667 6.5316L10.0598 12.4483L3.33334 6.51328V16.3333H16.6667V6.5316ZM3.75956 4.66667L10.0516 10.2183L16.2508 4.66667H3.75956Z" fill="currentColor"/>
+                            </svg>
+                            <input type="email" name="email" id="emailInput" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[14px] !leading-[1.6] !font-['Open_sans',sans-serif] !text-[#777] w-full" placeholder="Enter your email here!">
+                        </label>
+                        <label for="password" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
+                            <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[20px] h-[20px]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6.66667H16.6667C17.1269 6.66667 17.5 7.03977 17.5 7.5V17.5C17.5 17.9602 17.1269 18.3333 16.6667 18.3333H3.33333C2.8731 18.3333 2.5 17.9602 2.5 17.5V7.5C2.5 7.03977 2.8731 6.66667 3.33333 6.66667H5V5.83333C5 3.07191 7.23857 0.833332 10 0.833332C12.7614 0.833332 15 3.07191 15 5.83333V6.66667ZM4.16667 8.33333V16.6667H15.8333V8.33333H4.16667ZM9.16667 11.6667H10.8333V13.3333H9.16667V11.6667ZM5.83333 11.6667H7.5V13.3333H5.83333V11.6667ZM12.5 11.6667H14.1667V13.3333H12.5V11.6667ZM13.3333 6.66667V5.83333C13.3333 3.99238 11.8409 2.5 10 2.5C8.15905 2.5 6.66667 3.99238 6.66667 5.83333V6.66667H13.3333Z" fill="currentColor"/>
+                            </svg>
+                            <input type="password" name="password" id="password" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[14px] !leading-[1.6] !font-['Open_sans',sans-serif] !text-[#777] w-full" placeholder="Enter your password here!">
+                        </label>
+                        <div class="flex justify-between">
+                            <div class="flex">
+                                <label for="remember_me" class="!flex gap-[12px] items-center cursor-pointer">
+                                    <input type="checkbox" class="peer/remember" name="user_session[remember_me]" id="remember_me" hidden>
+                                    <div class="peer-checked-remember peer-checked/remember:!border-[#008060] peer-checked/remember:bg-[#008060] w-[16px] h-[16px] border !border-[rgba(119,119,119,0.4)] flex items-center justify-center">
+                                        <svg class="w-[14px] h-[14px] opacity-0" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83374 8.84968L11.196 3.48746L12.0209 4.31241L5.83374 10.4996L2.12142 6.7873L2.94638 5.96235L5.83374 8.84968Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text-white !leading-[1.6] !font-['Open_sans',sans-serif] !text-[14px]">
+                                        Remember me
+                                    </div>
+                                </label>
+                            </div>
+                            <a href="#" id="forgetPassLink" class="fw-forget-section flex !text-[#777777] !font-['Open_sans',sans-serif] !text-[14px] !leading-[1.6]">
+                                Forgot password
+                            </a>
+                        </div>
+                        <div class="flex max-sm:flex-col sm:flex-wrap gap-6">
+                            <button type="submit" class="login-button flex-1 sm:shrink-1 sm:basis-[230.5px] !bg-[#008060] items-center justify-center !py-[12px] !outline-none text-white !font-semibold !text-[14px] !font-['Open_sans',sans-serif] flex !leading-[1.6] gap-[6px]">
+                                <div class="">
+                                    Sign in
+                                </div>
+                                <svg class="!text-white w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.4763 9.66658L9.00634 5.19657L10.1848 4.01807L16.6667 10.4999L10.1848 16.9817L9.00634 15.8032L13.4763 11.3332H3.33334V9.66658H13.4763Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <button class="agentloginbtn flex-1 sm:shrink-1 sm:basis-[230.5px] border !border-[rgba(119,119,119,0.4)] items-center justify-center !py-[12px] !outline-none !text-[#777777] !font-semibold !text-[14px] !font-['Open_sans',sans-serif] flex !leading-[1.6] gap-[6px]">
+                                <svg class="!text-[#777777] w-[20px] h-[20px]" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.41668 12.2183V17.1667H11.0833V12.2183C14.3719 12.6283 16.9167 15.4337 16.9167 18.8333H3.58334C3.58334 15.4337 6.12809 12.6283 9.41668 12.2183ZM10.25 11.3333C7.48751 11.3333 5.25001 9.09584 5.25001 6.33334C5.25001 3.57084 7.48751 1.33334 10.25 1.33334C13.0125 1.33334 15.25 3.57084 15.25 6.33334C15.25 9.09584 13.0125 11.3333 10.25 11.3333Z" fill="currentColor"/>
+                                </svg>
+                                <div class="">
+                                    I'm an Agent!
+                                </div>
+                            </button>
+                        </div>
+                        <!-- <a href="#" class="!font-bold !text-white !text-[16.8px] !leading-[1.6] !font-['Open_sans',sans-serif] self-center sm:self-start">
+                            
+                        </a> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="forgetPassForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full d-none flex-col">
+            <div class="fw-form-section w-full flex-1 h-full flex flex-col">
+                <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-black xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="hidden" name="authenticity_token" value="">
+                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
+                        <div class="flex flex-col gap-[14px]">
+                            <p class="leading-[1.6] !font-semibold !text-[24.2px] !font-['Open_sans',sans-serif] !text-white flex-1">
+                                Forgot password
+                            </p>
+                            <p class="leading-[1.6] !text-[14px] !font-['Open_sans',sans-serif] !text-white flex-1">
+                                Give us your email address and instructions to reset your password will be emailed to you.
+                            </p>
+                        </div>
+                        <label for="email" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
+                            <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.50001 3H17.5C17.9603 3 18.3333 3.3731 18.3333 3.83333V17.1667C18.3333 17.6269 17.9603 18 17.5 18H2.50001C2.03977 18 1.66667 17.6269 1.66667 17.1667V3.83333C1.66667 3.3731 2.03977 3 2.50001 3ZM16.6667 6.5316L10.0598 12.4483L3.33334 6.51328V16.3333H16.6667V6.5316ZM3.75956 4.66667L10.0516 10.2183L16.2508 4.66667H3.75956Z" fill="currentColor"/>
+                            </svg>
+                            <input type="email" name="email" id="email" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[14px] !leading-[1.6] !font-['Open_sans',sans-serif] !text-[#777] w-full" placeholder="Enter your email here!">
+                        </label>
+                        <div class="flex max-sm:flex-col sm:flex-wrap gap-6">
+                            <button type="submit" class="cool-animation-hover password-forgot-button flex-1 sm:shrink-1 sm:basis-[230.5px] !bg-[#008060] items-center justify-center !py-[12px] !outline-none text-white !font-semibold !text-[14px] !font-['Open_sans',sans-serif] flex !leading-[1.6] gap-[6px]">
+                                <div class="">
+                                    Confirm reset password
+                                </div>
+                                <svg class="!text-white w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.4763 9.66658L9.00634 5.19657L10.1848 4.01807L16.6667 10.4999L10.1848 16.9817L9.00634 15.8032L13.4763 11.3332H3.33334V9.66658H13.4763Z" fill="white"/>
+                                </svg>
+                                <div class="cool-animation-portal border-0">
+                                    <div class="items-center bg-[#000] rounded-full h-full justify-center !py-[12px] !outline-none !text-[#008060] !font-semibold !text-[14px] !font-['Open_sans',sans-serif] flex !leading-[1.6] gap-[6px] whitespace-nowrap">
+                                        Confirm reset password
+                                        <svg class="!text-[#008060] w-[20px] h-[20px] shrink-0" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.4763 9.66658L9.00634 5.19657L10.1848 4.01807L16.6667 10.4999L10.1848 16.9817L9.00634 15.8032L13.4763 11.3332H3.33334V9.66658H13.4763Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <a href="#" id="loginFormLink" class="flex-1 sm:shrink-1 sm:basis-[230.5px] border !border-[rgba(119,119,119,0.4)] items-center justify-center !py-[12px] !outline-none !text-[#777777] !font-semibold !text-[14px] !font-['Open_sans',sans-serif] flex !leading-[1.6] gap-[6px]">
+                                <div class="">
+                                    Cancel
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+/* Reveal the checkmark when checkbox is checked */
+#remember_me:checked + .peer-checked-remember svg {
+  opacity: 1 !important;
+}
+/* Change the white to any color */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important; */
+/* } */
+/*Change text in autofill textbox*/
+/* input:-webkit-autofill{
+    -webkit-text-fill-color: #111 !important;
+} */
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('keyup', (e) => {
+            const target = e.target;
+
+            // Check if target is an input and has a value
+            if (target.tagName === 'INPUT') {
+                // Use setTimeout to wait for the character to be added to the value
+                setTimeout(() => {
+                    if (target.value.trim() !== '' && target.value.trim() !== null) {
+                        // Add class to the parent element
+                        target.parentElement.classList.add('active');
+                        console.log(target.value.trim());
+                    }else{
+                        target.parentElement.classList.remove('active');
+                    }
+                }, 0); // Wait for input value to update
+            }
+        })
+        // Snippets as HTML strings from Liquid
+        const loginFormHTML = `{% snippet login_form %}`;
+        const passwordFormHTML = `{% snippet password_form %}`; // May or may not be present
+
+        // Helper to extract authenticity_token from HTML string
+        function extractTokenFromHTML(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const input = doc.querySelector('input[name="authenticity_token"]');
+            return input ? input.value : '';
+        }
+
+        // Step 1: Extract tokens
+        const loginToken = extractTokenFromHTML(loginFormHTML);
+        const passwordToken = passwordFormHTML ? extractTokenFromHTML(passwordFormHTML) : '';
+
+        // Step 2: Update the token in the real #loginForm
+        if (loginToken) {
+            const loginForm = document.querySelector('#loginForm');
+            if (loginForm) {
+            const loginTokenInput = loginForm.querySelector('input[name="authenticity_token"]');
+            if (loginTokenInput) {
+                loginTokenInput.value = loginToken;
+            }
+            }
+        }
+
+        // Step 3: Update the token in the real #forgetPassForm, only if passwordFormHTML exists
+        if (passwordToken) {
+            const forgetPassForm = document.querySelector('#forgetPassForm');
+            if (forgetPassForm) {
+            const passTokenInput = forgetPassForm.querySelector('input[name="authenticity_token"]');
+            if (passTokenInput) {
+                passTokenInput.value = passwordToken;
+            }
+            }
+        }
+    })
+</script>
+<script src="./output_content/custom-scripts/login-page.js"></script>
+
+{% comment %} <section class="container">
+  <div class="row fw-loginform-wrapper justify-content-center align-items-center" id="loginForm">
+    <div class="col-lg-6 fw-form-section">
+      {{ page_message }}
+      {% snippet login_error_messages %}
+      <div class="form">
+        {% snippet login_form %}
+        {% if portal.has_alternate_login %}
+          <div class="fw-or">
+            <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
+            <hr />
+          </div>
+          <div class="fw-social-media-login row">
+            <div class="col-md-8 mx-auto">            
+              {% snippet social_login %}
+            </div>
+          </div>
+        {% endif %}
+          <div class="text-center fw-forget-section"><a href="#" id="forgetPassLink">{{ 'portal_translations.login.forgot' | t }}</a></div>
+      </div>
+      {% snippet agent_login %}
+      {% snippet customer_login %}
+    </div>
+  </div>
+    <div class="row fw-loginform-wrapper justify-content-center d-none" id="forgetPassForm">
+    <div class="col-lg-6 fw-form-section">
+      <div class="form">
+        {% snippet forgot_password_form %}
+        {% if portal.has_alternate_login %}
+          <div class="fw-or">
+            <div><span>{{ 'portal_translations.login.login_options' | t }}</span></div>
+            <hr />
+          </div>
+          <div class="fw-social-media-login row">
+            <div class="col-md-8 mx-auto">            
+              {% snippet social_login %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section> {% endcomment %}
