@@ -37313,6 +37313,9 @@ label.group.active {
   .h-\[20px\] {
     height: 20px;
   }
+  .h-\[120px\] {
+    height: 120px;
+  }
   .h-auto {
     height: auto;
   }
@@ -37345,6 +37348,9 @@ label.group.active {
   }
   .w-\[20px\] {
     width: 20px;
+  }
+  .w-\[120px\] {
+    width: 120px;
   }
   .w-auto {
     width: auto;
@@ -38836,6 +38842,11 @@ label.group.active {
   .sm\:\!pt-30 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 30) !important;
+    }
+  }
+  .sm\:pt-\[10px\] {
+    @media (width >= 40rem) {
+      padding-top: 10px;
     }
   }
   .sm\:\!text-\[34\.84px\] {
