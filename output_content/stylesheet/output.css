@@ -36245,6 +36245,9 @@ label.group.active {
   .bottom-100 {
     bottom: calc(var(--spacing) * 100);
   }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .z-\[1\] {
     z-index: 1;
   }
@@ -37316,6 +37319,9 @@ label.group.active {
   .h-\[120px\] {
     height: 120px;
   }
+  .h-\[800px\] {
+    height: 800px;
+  }
   .h-auto {
     height: auto;
   }
@@ -37327,6 +37333,12 @@ label.group.active {
   }
   .min-h-\[100vh\] {
     min-height: 100vh;
+  }
+  .min-h-\[533px\] {
+    min-height: 533px;
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
   }
   .w-25 {
     width: calc(var(--spacing) * 25);
@@ -37349,8 +37361,17 @@ label.group.active {
   .w-\[20px\] {
     width: 20px;
   }
+  .w-\[56px\] {
+    width: 56px;
+  }
   .w-\[120px\] {
     width: 120px;
+  }
+  .w-\[245px\] {
+    width: 245px;
+  }
+  .w-\[288px\] {
+    width: 288px;
   }
   .w-auto {
     width: auto;
@@ -37663,6 +37684,12 @@ label.group.active {
   .bg-\[linear-gradient\(to_bottom_left\,_\#ffffff_0\%\,_\#cccccc_100\%\)\] {
     background-image: linear-gradient(to bottom left, #ffffff 0%, #cccccc 100%);
   }
+  .object-contain {
+    object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
@@ -37671,6 +37698,9 @@ label.group.active {
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .p-9 {
+    padding: calc(var(--spacing) * 9);
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
@@ -38593,6 +38623,9 @@ label.group.active {
   .\!font-\[\'Open_sans\'\,sans-serif\] {
     font-family: 'Open sans',sans-serif !important;
   }
+  .font-\[\'Cormorant_Garamond\'\,sans-serif\] {
+    font-family: 'Cormorant Garamond',sans-serif;
+  }
   .\!text-\[14px\] {
     font-size: 14px !important;
   }
@@ -38608,6 +38641,9 @@ label.group.active {
   .\!text-\[34\.83px\] {
     font-size: 34.83px !important;
   }
+  .text-\[42px\] {
+    font-size: 42px;
+  }
   .\!leading-\[1\.6\] {
     --tw-leading: 1.6 !important;
     line-height: 1.6 !important;
@@ -38620,6 +38656,10 @@ label.group.active {
     --tw-leading: 1.6;
     line-height: 1.6;
   }
+  .leading-\[1\.21\] {
+    --tw-leading: 1.21;
+    line-height: 1.21;
+  }
   .\!font-\[300\] {
     --tw-font-weight: 300 !important;
     font-weight: 300 !important;
@@ -38631,6 +38671,10 @@ label.group.active {
   .\!font-semibold {
     --tw-font-weight: var(--font-weight-semibold) !important;
     font-weight: var(--font-weight-semibold) !important;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .text-nowrap {
     text-wrap: nowrap;

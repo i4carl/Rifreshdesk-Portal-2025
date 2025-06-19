@@ -54,7 +54,7 @@
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
                 <form class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-black xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full" id="new_user_session" novalidate="novalidate" action="/support/login" accept-charset="UTF-8" method="post">
                     <input name="utf8" type="hidden" value="✓" />
-                    <input type="hidden" name="authenticity_token" value="DmT8cTIYAep9yHBY449q4HWRbLedLIk/0v2w5fVvzITlu4VB2BxIipCjCkHMQvoowBIjs5+PIAuxzLwLgaPWPQ==" />
+                    <input type="hidden" name="authenticity_token" value="" />
                     <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
                         <label for="emailInput" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
                             <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
                 <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-black xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
                     <input name="utf8" type="hidden" value="✓">
-                    <input type="hidden" name="authenticity_token" value="t0lOISoQi8tZbPi3rmRf02fuIir1iTYO2v0sncuUPDiM65qxy/+jKOKcDPiOMDSskFunb7GvQGYrwbthkqgRRA==">
+                    <input type="hidden" name="authenticity_token" value="">
                     <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
                         <div class="flex flex-col gap-[14px]">
                             <p class="leading-[1.6] !font-semibold !text-[24.2px] !font-['Open_sans',sans-serif] !text-white flex-1">
@@ -125,7 +125,7 @@
                                 Give us your email address and instructions to reset your password will be emailed to you.
                             </p>
                         </div>
-                        <label for="email" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b !border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
+                        <label for="email" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
                             <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.50001 3H17.5C17.9603 3 18.3333 3.3731 18.3333 3.83333V17.1667C18.3333 17.6269 17.9603 18 17.5 18H2.50001C2.03977 18 1.66667 17.6269 1.66667 17.1667V3.83333C1.66667 3.3731 2.03977 3 2.50001 3ZM16.6667 6.5316L10.0598 12.4483L3.33334 6.51328V16.3333H16.6667V6.5316ZM3.75956 4.66667L10.0516 10.2183L16.2508 4.66667H3.75956Z" fill="currentColor"/>
                             </svg>
@@ -196,6 +196,43 @@ input:-webkit-autofill:active{
                 }, 0); // Wait for input value to update
             }
         })
+        // Snippets as HTML strings from Liquid
+        const loginFormHTML = `{% snippet login_form %}`;
+        const passwordFormHTML = `{% snippet password_form %}`; // May or may not be present
+
+        // Helper to extract authenticity_token from HTML string
+        function extractTokenFromHTML(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const input = doc.querySelector('input[name="authenticity_token"]');
+            return input ? input.value : '';
+        }
+
+        // Step 1: Extract tokens
+        const loginToken = extractTokenFromHTML(loginFormHTML);
+        const passwordToken = passwordFormHTML ? extractTokenFromHTML(passwordFormHTML) : '';
+
+        // Step 2: Update the token in the real #loginForm
+        if (loginToken) {
+            const loginForm = document.querySelector('#loginForm');
+            if (loginForm) {
+            const loginTokenInput = loginForm.querySelector('input[name="authenticity_token"]');
+            if (loginTokenInput) {
+                loginTokenInput.value = loginToken;
+            }
+            }
+        }
+
+        // Step 3: Update the token in the real #forgetPassForm, only if passwordFormHTML exists
+        if (passwordToken) {
+            const forgetPassForm = document.querySelector('#forgetPassForm');
+            if (forgetPassForm) {
+            const passTokenInput = forgetPassForm.querySelector('input[name="authenticity_token"]');
+            if (passTokenInput) {
+                passTokenInput.value = passwordToken;
+            }
+            }
+        }
     })
 </script>
 <script src="./output_content/custom-scripts/login-page.js"></script>
