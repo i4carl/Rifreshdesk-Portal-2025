@@ -40,14 +40,51 @@
             <div class="bg-[#000] w-[288px] h-full">
             </div>
         </div>
-        <header class="w-full justify-between flex relative z-[1]">
-            <div id="portal-brand-wrapper" class="flex w-[245px] gap-6 ">
-                <img src="./assets/global/header-logo.png" class="w-14 object-contain" alt="">
-                <div class="font-['Cormorant_Garamond',sans-serif] font-bold text-white text-[42px] leading-[1.21]">
-                    Freshdesk
+        <div class="flex flex-col w-full relative gap-30 z-[1]">
+            <header class="w-full justify-between items-center flex">
+                <div id="portal-brand-wrapper" class="flex w-[245px] gap-6 ">
+                    <img src="./assets/global/header-logo.png" class="w-14 object-contain" alt="">
+                    <div class="font-['Cormorant_Garamond',sans-serif] font-bold text-white text-[42px] leading-[1.21]">
+                        Freshdesk
+                    </div>
                 </div>
+                <nav class="flex gap-3 ">
+                    <a href="" class="gap-3 flex font-['Open_sans',sans-serif] text-sm leading-[1.6] text-white p-3">
+                        <svg class="text-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6667 16.6668C16.6667 17.127 16.2936 17.5001 15.8334 17.5001H4.16671C3.70647 17.5001 3.33337 17.127 3.33337 16.6668V9.16676H0.833374L9.43946 1.34302C9.75729 1.05407 10.2428 1.05407 10.5606 1.34302L19.1667 9.16676H16.6667V16.6668ZM9.16671 10.8334V15.8334H10.8334V10.8334H9.16671Z" fill="currentColor"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="" class="gap-3 flex font-['Open_sans',sans-serif] text-sm leading-[1.6] text-white p-3">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6667 18.3333H5.41667C3.80583 18.3333 2.5 17.0275 2.5 15.4167V4.16666C2.5 2.78595 3.61929 1.66666 5 1.66666H16.6667C17.1269 1.66666 17.5 2.03976 17.5 2.49999V17.5C17.5 17.9602 17.1269 18.3333 16.6667 18.3333ZM15.8333 16.6667V14.1667H5.41667C4.72631 14.1667 4.16667 14.7263 4.16667 15.4167C4.16667 16.107 4.72631 16.6667 5.41667 16.6667H15.8333ZM8.33333 3.33332V9.99999L11.25 8.33332L14.1667 9.99999V3.33332H8.33333Z" fill="white"/>
+                        </svg>
+                        <span>Knowledge Base</span>
+                    </a>
+                    <a href="" class="gap-3 flex font-['Open_sans',sans-serif] text-sm leading-[1.6] text-white p-3">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.16659 11.7183V16.6667H10.8333V11.7183C14.1218 12.1283 16.6666 14.9337 16.6666 18.3333H3.33325C3.33325 14.9337 5.87799 12.1283 9.16659 11.7183ZM9.99992 10.8333C7.23742 10.8333 4.99992 8.59584 4.99992 5.83334C4.99992 3.07084 7.23742 0.833344 9.99992 0.833344C12.7624 0.833344 14.9999 3.07084 14.9999 5.83334C14.9999 8.59584 12.7624 10.8333 9.99992 10.8333Z" fill="white"/>
+                        </svg>
+                        <span>Forums</span>
+                    </a>
+                    <a href="" class="gap-3 flex font-['Open_sans',sans-serif] text-sm leading-[1.6] text-white p-3">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.504 2.4996C17.9643 2.4996 18.3373 2.8727 18.3373 3.33294V7.91627C17.1868 7.91627 16.254 8.84901 16.254 9.9996C16.254 11.1502 17.1868 12.0829 18.3373 12.0829V16.6663C18.3373 17.1265 17.9643 17.4996 17.504 17.4996H2.50399C2.04375 17.4996 1.67065 17.1265 1.67065 16.6663V12.0829C2.82125 12.0829 3.75399 11.1502 3.75399 9.9996C3.75399 8.84901 2.82125 7.91627 1.67065 7.91627V3.33294C1.67065 2.8727 2.04375 2.4996 2.50399 2.4996H17.504ZM13.3373 7.4996H6.67065V12.4996H13.3373V7.4996Z" fill="white"/>
+                        </svg>
+                        <span>Tickets</span>
+                    </a>
+                </nav>
+            </header>
+            <div id="search_container" class="flex flex-col max-w-150 items-start">
+                <div class="text-white font-['Open_sans',sans-serif] text-[20.16px] leading-[1.6] font-bold">Need help?</div>
+                <label for="searchBar" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[rgba(119,119,119,0.4)] w-full gap-[10px] items-center">
+                    <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#777] w-[35px] h-[35px]" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.972 2.97998C23.1855 2.97998 29.04 8.83444 29.04 16.048C29.04 23.2615 23.1855 29.116 15.972 29.116C8.75846 29.116 2.90399 23.2615 2.90399 16.048C2.90399 8.83444 8.75846 2.97998 15.972 2.97998ZM15.972 26.212C21.5876 26.212 26.136 21.6636 26.136 16.048C26.136 10.4324 21.5876 5.88398 15.972 5.88398C10.3564 5.88398 5.80799 10.4324 5.80799 16.048C5.80799 21.6636 10.3564 26.212 15.972 26.212ZM28.2926 26.3152L32.3995 30.4221L30.3461 32.4755L26.2392 28.3686L28.2926 26.3152Z" fill="currentColor"/>
+                    </svg>
+                    <input type="text" name="text" id="searchBar" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[29.04px] !leading-[1.6] !font-['Open_sans',sans-serif] !text-[#777] w-full" placeholder="Enter the search term here...">
+                </label>
             </div>
-        </header>
+        </div>
     </div>
 </section>
 <!-- <section>

@@ -7,16 +7,18 @@
 
     if($footerpage != 'login-page') {
 ?>
-<footer class="container-fluid px-0">
+<footer class="w-full relative !bg-black">
     <section class="fw-contact-info d-none">
         <p class="fw-contacts"></p>
     </section>
-    <section class="fw-credit">
-        <nav class="fw-laws">
-            <span class="copyright-text">Helpdesk Software by</span>
-            <a id="" href="https://www.freshworks.com/freshdesk/?utm_source=portal&amp;utm_medium=reflink&amp;utm_campaign=portal_reflink" class="fw-branding" target="_blank">Freshdesk</a>
-            <a id="" href="" class="cookie-link" data-bs-toggle="modal" data-bs-target="#portal-cookie-info">Cookie policy</a>
-
+    <section class="fw-credit bg-black !p-6">
+        <nav class="fw-laws flex justify-start !px-6 font-['Open_sans',sans-serif] !text-white gap-[10px] text-sm leading-[1.6]">
+            <span class="copyright-text leading-[1.6] text-white !opacity-100">Helpdesk Software by</span>
+            <div class="flex text-decoration-none font-bold">
+                <a id="" href="https://www.freshworks.com/freshdesk/?utm_source=portal&amp;utm_medium=reflink&amp;utm_campaign=portal_reflink" class="text-decoration-none fw-branding !pl-0 !pr-[10px] text-sm leading-[1.6]" target="_blank">Freshdesk</a>
+                <a id="" href="" class="text-decoration-none cookie-link px-[10px] text-sm leading-[1.6] text-white !opacity-100" data-bs-toggle="modal" data-bs-target="#portal-cookie-info">Cookie policy</a>
+                <a id="" href="https://www.freshworks.com/privacy" class="footer-link text-decoration-none !pl-0 leading-[1.6]" target="_blank">Privacy Policy</a>
+            </div>
             <div class="modal fade" id="portal-cookie-info" tabindex="-1" role="dialog" aria-labelledby="portal-cookie-info" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -39,7 +41,6 @@
                     </div>
                 </div>
             </div>
-            <a id="" href="https://www.freshworks.com/privacy" class="footer-link" target="_blank">Privacy Policy</a>
         </nav>
     </section>
 </footer>
