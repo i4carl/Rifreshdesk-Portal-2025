@@ -32,13 +32,13 @@
     <div class="main-details__wrapper flex flex-col xl:flex-row xl:flex-1 justify-center items-center gap-[38px] sm:gap-[86px] relative z-[1] min-h-[100vh]">
         <div id="main-details__header" class="flex flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-center gap-6 !px-12 !py-6">
             <div class="w-full md:w-[525px] h-fit flex">
-                <img src="./assets/global/Transparent.png" class="w-full h-full object-contain" alt="">
+                <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/Transparent.png" class="w-full h-full object-contain" alt="">
             </div>
         </div>
         <div id="loginForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full flex flex-col">
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
                 <form class="relative new_user_session w-full flex flex-col !px-12 !py-6 xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full" id="new_user_session" novalidate="novalidate" action="/support/login" accept-charset="UTF-8" method="post">
-                    <div class="absolute w-full h-full bg-[url('/2025/rifreshdesk/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
+                    <div class="absolute w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                     <input name="utf8" type="hidden" value="✓" />
                     <input type="hidden" name="authenticity_token" value="" />
                     <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto relative z-[2]">
@@ -101,7 +101,7 @@
         <div id="forgetPassForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full d-none flex-col">
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
                 <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="relative new_user_session w-full flex flex-col !px-12 !py-6 !bg-[#145082] xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
-                    <div class="absolute w-full h-full bg-[url('/2025/rifreshdesk/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
+                    <div class="absolute w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                     <input name="utf8" type="hidden" value="✓">
                     <input type="hidden" name="authenticity_token" value="">
                     <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto relative z-[2]">
