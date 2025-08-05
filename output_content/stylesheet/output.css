@@ -37325,12 +37325,6 @@ label.group.active {
   .h-\[35px\] {
     height: 35px;
   }
-  .h-\[120px\] {
-    height: 120px;
-  }
-  .h-\[194px\] {
-    height: 194px;
-  }
   .h-auto {
     height: auto;
   }
@@ -37376,20 +37370,11 @@ label.group.active {
   .w-\[35px\] {
     width: 35px;
   }
-  .w-\[80\%\] {
-    width: 80%;
-  }
-  .w-\[120px\] {
-    width: 120px;
-  }
   .w-\[245px\] {
     width: 245px;
   }
   .w-\[288px\] {
     width: 288px;
-  }
-  .w-\[525px\] {
-    width: 525px;
   }
   .w-auto {
     width: auto;
@@ -37651,9 +37636,6 @@ label.group.active {
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-\[8px\] {
-    border-radius: 8px;
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -37699,9 +37681,6 @@ label.group.active {
   .\!border-\[\#fff\] {
     border-color: #fff !important;
   }
-  .\!border-\[rgba\(119\,119\,119\,0\.4\)\] {
-    border-color: rgba(119,119,119,0.4) !important;
-  }
   .border-\[\#fff\] {
     border-color: #fff;
   }
@@ -37713,9 +37692,6 @@ label.group.active {
   }
   .\!bg-\[\#4C93CF\] {
     background-color: #4C93CF !important;
-  }
-  .\!bg-\[\#008060\] {
-    background-color: #008060 !important;
   }
   .\!bg-\[\#145082\] {
     background-color: #145082 !important;
@@ -38671,9 +38647,6 @@ label.group.active {
   .\!pl-0 {
     padding-left: calc(var(--spacing) * 0) !important;
   }
-  .\!text-center {
-    text-align: center !important;
-  }
   .text-center {
     text-align: center;
   }
@@ -38700,9 +38673,6 @@ label.group.active {
   }
   .align-top {
     vertical-align: top;
-  }
-  .\!font-\[\'Cormorant_Garamond\'\,sans-serif\] {
-    font-family: 'Cormorant Garamond',sans-serif !important;
   }
   .\!font-\[\'Open_sans\'\,sans-serif\] {
     font-family: 'Open sans',sans-serif !important;
@@ -38736,14 +38706,8 @@ label.group.active {
   .\!text-\[24\.2px\] {
     font-size: 24.2px !important;
   }
-  .\!text-\[24\.19px\] {
-    font-size: 24.19px !important;
-  }
   .\!text-\[29\.04px\] {
     font-size: 29.04px !important;
-  }
-  .\!text-\[34\.83px\] {
-    font-size: 34.83px !important;
   }
   .text-\[20\.16px\] {
     font-size: 20.16px;
@@ -38754,10 +38718,6 @@ label.group.active {
   .\!leading-\[1\.6\] {
     --tw-leading: 1.6 !important;
     line-height: 1.6 !important;
-  }
-  .\!leading-\[1\.15\] {
-    --tw-leading: 1.15 !important;
-    line-height: 1.15 !important;
   }
   .leading-\[1\.6\] {
     --tw-leading: 1.6;
@@ -38770,10 +38730,6 @@ label.group.active {
   .leading-\[1\.21\] {
     --tw-leading: 1.21;
     line-height: 1.21;
-  }
-  .\!font-\[300\] {
-    --tw-font-weight: 300 !important;
-    font-weight: 300 !important;
   }
   .\!font-bold {
     --tw-font-weight: var(--font-weight-bold) !important;
@@ -38801,18 +38757,6 @@ label.group.active {
   }
   .\!text-\[\#777\] {
     color: #777 !important;
-  }
-  .\!text-\[\#008060\] {
-    color: #008060 !important;
-  }
-  .\!text-\[\#111111\] {
-    color: #111111 !important;
-  }
-  .\!text-\[\#777777\] {
-    color: #777777 !important;
-  }
-  .\!text-\[\#fff777\] {
-    color: #fff777 !important;
   }
   .\!text-\[\#fff\] {
     color: #fff !important;
@@ -38927,19 +38871,9 @@ label.group.active {
       border-color: #4C93CF !important;
     }
   }
-  .peer-checked\/remember\:\!border-\[\#008060\] {
-    &:is(:where(.peer\/remember):checked ~ *) {
-      border-color: #008060 !important;
-    }
-  }
   .peer-checked\/remember\:bg-\[\#4C93CF\] {
     &:is(:where(.peer\/remember):checked ~ *) {
       background-color: #4C93CF;
-    }
-  }
-  .peer-checked\/remember\:bg-\[\#008060\] {
-    &:is(:where(.peer\/remember):checked ~ *) {
-      background-color: #008060;
     }
   }
   .autofill\:bg-\[\#000\] {
@@ -38964,11 +38898,6 @@ label.group.active {
       flex-direction: column;
     }
   }
-  .sm\:hidden {
-    @media (width >= 40rem) {
-      display: none;
-    }
-  }
   .sm\:shrink-1 {
     @media (width >= 40rem) {
       flex-shrink: 1;
@@ -38989,16 +38918,6 @@ label.group.active {
       flex-wrap: wrap;
     }
   }
-  .sm\:items-start {
-    @media (width >= 40rem) {
-      align-items: flex-start;
-    }
-  }
-  .sm\:gap-\[14px\] {
-    @media (width >= 40rem) {
-      gap: 14px;
-    }
-  }
   .sm\:gap-\[86px\] {
     @media (width >= 40rem) {
       gap: 86px;
@@ -39012,27 +38931,6 @@ label.group.active {
   .sm\:\!pt-30 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 30) !important;
-    }
-  }
-  .sm\:pt-\[10px\] {
-    @media (width >= 40rem) {
-      padding-top: 10px;
-    }
-  }
-  .sm\:\!text-\[34\.84px\] {
-    @media (width >= 40rem) {
-      font-size: 34.84px !important;
-    }
-  }
-  .sm\:\!text-\[60\.192px\] {
-    @media (width >= 40rem) {
-      font-size: 60.192px !important;
-    }
-  }
-  .sm\:\!font-semibold {
-    @media (width >= 40rem) {
-      --tw-font-weight: var(--font-weight-semibold) !important;
-      font-weight: var(--font-weight-semibold) !important;
     }
   }
   .md\:w-\[525px\] {
@@ -39075,6 +38973,11 @@ label.group.active {
       flex-direction: row;
     }
   }
+  .xl\:items-center {
+    @media (width >= 80rem) {
+      align-items: center;
+    }
+  }
   .xl\:items-start {
     @media (width >= 80rem) {
       align-items: flex-start;
@@ -39083,11 +38986,6 @@ label.group.active {
   .xl\:\!pt-0 {
     @media (width >= 80rem) {
       padding-top: calc(var(--spacing) * 0) !important;
-    }
-  }
-  .xl\:\!text-left {
-    @media (width >= 80rem) {
-      text-align: left !important;
     }
   }
 }
