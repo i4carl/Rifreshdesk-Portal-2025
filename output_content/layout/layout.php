@@ -1,16 +1,16 @@
 <?php
   // Import the header file (includes opening HTML tags, <head>, site header, etc.)
   include 'header.php';
+
+  // Get the requested page from the URL, e.g. index.php?page=about
+  $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+  // Sanitize page name to avoid directory traversal
+  $page = basename($page);
 ?>
 
-<main class="fw-main-wrapper mt-0 min-h-[100vh]" id="fw-main-content">
+<main class="fw-main-wrapper mt-0 <?php if($page == 'login-page'){ ?> min-h-[100vh] <?php } ?>" id="fw-main-content">
   <?php
-    // Get the requested page from the URL, e.g. index.php?page=about
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
-    // Sanitize page name to avoid directory traversal
-    $page = basename($page);
-
     // Build the path to the page content file
     $file = "output_content/pages/general_pages/{$page}.php";
 
