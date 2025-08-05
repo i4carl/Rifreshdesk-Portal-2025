@@ -30,6 +30,29 @@
     label.group.active{
         border-color: #fff !important;
     }
+    @media screen and (max-width: 1024px){
+        #menuNavDisplay{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 38px 24px;
+            background: #172965e0;
+            width: 100%;
+            height: 100%;
+            z-index: 1024;
+            backdrop-filter: blur(8px);
+            transform: translateX(100%);
+            transition: all ease 300ms;
+        }
+        #menuNavDisplay.is-open{
+            transform: translateX(0%);
+        }
+        .menu-button{
+            z-index: 1025;
+        }
+    }
 </style>
 <section class="fw-helpcenter flex w-full flex-col relative !bg-white">
     <div class="flex flex-col w-full min-h-[533px] relative p-9">
@@ -45,35 +68,55 @@
                 <div id="portal-brand-wrapper" class="flex w-[133px] gap-6 shrink-0">
                     <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/global/PESO.png" class="w-full object-contain" alt="">
                 </div>
-                <div class="menu-button cursor-pointer w-6 h-6 flex shrink-0 md:hidden">
+                <div class="menu-button cursor-pointer w-6 h-6 flex shrink-0 lg:hidden">
                     <svg class="w-full h-full text-white" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="white"/>
                     </svg>
                 </div>
-                <nav class="flex gap-3 hidden md:flex">
-                    <a href="" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
+                <nav id="menuNavDisplay" class="flex gap-3">
+                    <a href="/support/home" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
                         <svg class="text-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.6667 16.6668C16.6667 17.127 16.2936 17.5001 15.8334 17.5001H4.16671C3.70647 17.5001 3.33337 17.127 3.33337 16.6668V9.16676H0.833374L9.43946 1.34302C9.75729 1.05407 10.2428 1.05407 10.5606 1.34302L19.1667 9.16676H16.6667V16.6668ZM9.16671 10.8334V15.8334H10.8334V10.8334H9.16671Z" fill="currentColor"/>
+                            <path
+                                d="M16.6667 16.6668C16.6667 17.127 16.2936 17.5001 15.8334 17.5001H4.16671C3.70647 17.5001 3.33337 17.127 3.33337 16.6668V9.16676H0.833374L9.43946 1.34302C9.75729 1.05407 10.2428 1.05407 10.5606 1.34302L19.1667 9.16676H16.6667V16.6668ZM9.16671 10.8334V15.8334H10.8334V10.8334H9.16671Z"
+                                fill="currentColor"
+                            ></path>
                         </svg>
                         <span>Home</span>
                     </a>
-                    <a href="" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
+                    <a href="/support/solutions" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.6667 18.3333H5.41667C3.80583 18.3333 2.5 17.0275 2.5 15.4167V4.16666C2.5 2.78595 3.61929 1.66666 5 1.66666H16.6667C17.1269 1.66666 17.5 2.03976 17.5 2.49999V17.5C17.5 17.9602 17.1269 18.3333 16.6667 18.3333ZM15.8333 16.6667V14.1667H5.41667C4.72631 14.1667 4.16667 14.7263 4.16667 15.4167C4.16667 16.107 4.72631 16.6667 5.41667 16.6667H15.8333ZM8.33333 3.33332V9.99999L11.25 8.33332L14.1667 9.99999V3.33332H8.33333Z" fill="white"/>
+                            <path
+                                d="M16.6667 18.3333H5.41667C3.80583 18.3333 2.5 17.0275 2.5 15.4167V4.16666C2.5 2.78595 3.61929 1.66666 5 1.66666H16.6667C17.1269 1.66666 17.5 2.03976 17.5 2.49999V17.5C17.5 17.9602 17.1269 18.3333 16.6667 18.3333ZM15.8333 16.6667V14.1667H5.41667C4.72631 14.1667 4.16667 14.7263 4.16667 15.4167C4.16667 16.107 4.72631 16.6667 5.41667 16.6667H15.8333ZM8.33333 3.33332V9.99999L11.25 8.33332L14.1667 9.99999V3.33332H8.33333Z"
+                                fill="white"
+                            ></path>
                         </svg>
                         <span>Knowledge Base</span>
                     </a>
-                    <a href="" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
+                    <a href="/support/discussions" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.16659 11.7183V16.6667H10.8333V11.7183C14.1218 12.1283 16.6666 14.9337 16.6666 18.3333H3.33325C3.33325 14.9337 5.87799 12.1283 9.16659 11.7183ZM9.99992 10.8333C7.23742 10.8333 4.99992 8.59584 4.99992 5.83334C4.99992 3.07084 7.23742 0.833344 9.99992 0.833344C12.7624 0.833344 14.9999 3.07084 14.9999 5.83334C14.9999 8.59584 12.7624 10.8333 9.99992 10.8333Z" fill="white"/>
+                            <path
+                                d="M9.16659 11.7183V16.6667H10.8333V11.7183C14.1218 12.1283 16.6666 14.9337 16.6666 18.3333H3.33325C3.33325 14.9337 5.87799 12.1283 9.16659 11.7183ZM9.99992 10.8333C7.23742 10.8333 4.99992 8.59584 4.99992 5.83334C4.99992 3.07084 7.23742 0.833344 9.99992 0.833344C12.7624 0.833344 14.9999 3.07084 14.9999 5.83334C14.9999 8.59584 12.7624 10.8333 9.99992 10.8333Z"
+                                fill="white"
+                            ></path>
                         </svg>
                         <span>Forums</span>
                     </a>
-                    <a href="" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
+                    <a href="/support/tickets" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.504 2.4996C17.9643 2.4996 18.3373 2.8727 18.3373 3.33294V7.91627C17.1868 7.91627 16.254 8.84901 16.254 9.9996C16.254 11.1502 17.1868 12.0829 18.3373 12.0829V16.6663C18.3373 17.1265 17.9643 17.4996 17.504 17.4996H2.50399C2.04375 17.4996 1.67065 17.1265 1.67065 16.6663V12.0829C2.82125 12.0829 3.75399 11.1502 3.75399 9.9996C3.75399 8.84901 2.82125 7.91627 1.67065 7.91627V3.33294C1.67065 2.8727 2.04375 2.4996 2.50399 2.4996H17.504ZM13.3373 7.4996H6.67065V12.4996H13.3373V7.4996Z" fill="white"/>
+                            <path
+                                d="M17.504 2.4996C17.9643 2.4996 18.3373 2.8727 18.3373 3.33294V7.91627C17.1868 7.91627 16.254 8.84901 16.254 9.9996C16.254 11.1502 17.1868 12.0829 18.3373 12.0829V16.6663C18.3373 17.1265 17.9643 17.4996 17.504 17.4996H2.50399C2.04375 17.4996 1.67065 17.1265 1.67065 16.6663V12.0829C2.82125 12.0829 3.75399 11.1502 3.75399 9.9996C3.75399 8.84901 2.82125 7.91627 1.67065 7.91627V3.33294C1.67065 2.8727 2.04375 2.4996 2.50399 2.4996H17.504ZM13.3373 7.4996H6.67065V12.4996H13.3373V7.4996Z"
+                                fill="white"
+                            ></path>
                         </svg>
                         <span>Tickets</span>
+                    </a>
+                    <a href="/logout" class="gap-3 flex !font-['Poppins',sans-serif] text-sm leading-[1.6] text-white p-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 17L21 12L16 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21 12H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 5H6C4.89543 5 4 5.89543 4 7V17C4 18.1046 4.89543 19 6 19H12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>Logout</span>
                     </a>
                 </nav>
             </header>
