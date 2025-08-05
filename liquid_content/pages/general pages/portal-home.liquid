@@ -79,12 +79,86 @@
             </header>
             <div id="search_container" class="flex flex-col max-w-150 items-start">
                 <div class="text-white !font-['Poppins',sans-serif] text-[20.16px] leading-[1.6] font-bold ml-[42px]">Need help?</div>
-                <label for="searchBar" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[#fff] w-full gap-[10px] items-center">
-                    <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#fff] w-[35px] h-[35px]" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.972 2.97998C23.1855 2.97998 29.04 8.83444 29.04 16.048C29.04 23.2615 23.1855 29.116 15.972 29.116C8.75846 29.116 2.90399 23.2615 2.90399 16.048C2.90399 8.83444 8.75846 2.97998 15.972 2.97998ZM15.972 26.212C21.5876 26.212 26.136 21.6636 26.136 16.048C26.136 10.4324 21.5876 5.88398 15.972 5.88398C10.3564 5.88398 5.80799 10.4324 5.80799 16.048C5.80799 21.6636 10.3564 26.212 15.972 26.212ZM28.2926 26.3152L32.3995 30.4221L30.3461 32.4755L26.2392 28.3686L28.2926 26.3152Z" fill="currentColor"/>
-                    </svg>
-                    <input type="text" name="text" id="searchBar" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[29.04px] !leading-[1.6] !!font-['Poppins',sans-serif] !text-[#fff] w-full" placeholder="Enter the search term here...">
-                </label>
+                <form action="/support/search" id="fw-search-form" data-current-tab="all">
+                  <div class="fw-search flex flex-col mt-0">
+                    <label for="searchBar" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[#fff] w-full gap-[10px] items-center">
+                        <button type="submit" class="input-group-text !p-0 !bg-transparent !border-none !h-0">
+                          <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#fff] w-[35px] h-[35px]" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.972 2.97998C23.1855 2.97998 29.04 8.83444 29.04 16.048C29.04 23.2615 23.1855 29.116 15.972 29.116C8.75846 29.116 2.90399 23.2615 2.90399 16.048C2.90399 8.83444 8.75846 2.97998 15.972 2.97998ZM15.972 26.212C21.5876 26.212 26.136 21.6636 26.136 16.048C26.136 10.4324 21.5876 5.88398 15.972 5.88398C10.3564 5.88398 5.80799 10.4324 5.80799 16.048C5.80799 21.6636 10.3564 26.212 15.972 26.212ZM28.2926 26.3152L32.3995 30.4221L30.3461 32.4755L26.2392 28.3686L28.2926 26.3152Z" fill="currentColor"></path>
+                          </svg>
+                        </button>
+                        <input type="text" name="term" id="searchInput" class="autofill:bg-[#000] px-0 group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[29.04px] !leading-[1.6] !!font-['Poppins',sans-serif] !text-[#fff] w-full" placeholder="Enter the search term here...">
+                    </label>
+                    <div class="fw-autocomplete-wrapper d-none box-shadow bg-light br-8 p-16 top-[100%]">
+                        <div class="fw-autocomplete-header">
+                            <button class="fw-search-tab fw-active-search-tab" data-tab="all">
+                                All
+                            </button>
+
+                            <button class="fw-search-tab" data-tab="solutions">
+                                Articles
+                            </button>
+                        </div>
+
+                        <div class="fw-loading my-80 d-none"></div>
+
+                        <div class="fw-autocomplete-focus">
+                            <div class="fw-recent-search">
+                                <div class="fw-recent-title row align-items-center">
+                                    <div class="col-8 fs-20 semi-bold"><span class="icon-recent me-8"></span>Recent Searches</div>
+                                    <div class="col-4 px-0 text-end"><button class="btn btn-link fw-clear-all">Clear all</button></div>
+                                </div>
+                                <p class="ps-32 fw-no-recent-searches mb-16 d-none">No recent searches</p>
+                                <ul class="fw-no-bullet fw-recent-searches mb-16"><li><a class="ps-32 line-clamp-2" href="/en/support/search?term=asd">asd</a></li><li><a class="ps-32 line-clamp-2" href="/en/support/search?term=as">as</a></li><li><a class="ps-32 line-clamp-2" href="/en/support/search?term=dcxcas">dcxcas</a></li><li><a class="ps-32 line-clamp-2" href="/en/support/search?term=ad">ad</a></li></ul>
+                            </div>
+
+                            <div class="fw-popular-articles-search">
+                                <p class="fs-20 semi-bold fw-popular-title"><span class="icon-article me-8"></span> Popular Articles</p>
+                                <ul class="fw-no-bullet fw-popular-topics"><li><a href="/support/solutions/articles/1070000079211-tcl-television" class="ps-32 line-clamp-2">TCL television</a></li><li><a href="/support/solutions/articles/1070000079212-tcl-smartphone" class="ps-32 line-clamp-2">TCL Smartphone</a></li><li><a href="/support/solutions/articles/1070000079210-tcl-inspires-greatness-and-unveils-its-vision-for-the-future-of-home-theatre-mobile-tech-and-home-li" class="ps-32 line-clamp-2">TCL Inspires Greatness and Unveils its Vision for the Future of Home Theatre, Mobile Tech and Home Living at IFA 2024</a></li></ul>
+                            </div>
+
+                            <div class="fw-solutions-search-results fw-results d-none">
+                                <hr class="mt-24">
+                                <div class="fw-solutions-search-results-title row align-items-center">
+                                    <div class="col-8 fs-20 semi-bold"><span class="icon-article me-8"></span>Articles</div>
+                                    <div class="col-4 px-0 text-end"><a class="btn btn-link fw-view-all fw-solutions-view-all" href="/support/search/solutions">View all (4)</a></div>
+                                </div>
+                                <ul class="fw-no-bullet fw-search-results fw-solutions-search-results-container"></ul>
+                            </div>
+
+                            <div class="fw-topics-search-results fw-results d-none">
+                                <hr class="mt-24">
+                                <div class="fw-topics-search-results-title row align-items-center">
+                                    <div class="col-8 fs-20 semi-bold"><span class="icon-topic me-8"></span>Topics</div>
+                                    <div class="col-4 px-0 text-end"><a class="btn btn-link fw-view-all fw-topics-view-all" href="/support/search/topics">View all</a></div>
+                                </div>
+                                <ul class="fw-no-bullet fw-search-results fw-topics-search-results-container"></ul>
+                            </div>
+
+                            <div class="fw-tickets-search-results fw-results d-none">
+                                <hr class="mt-24">
+                                <div class="fw-tickets-search-results-title row align-items-center">
+                                    <div class="col-8 fs-20 semi-bold"><span class="icon-ticket me-8"></span>Tickets</div>
+                                    <div class="col-4 px-0 text-end"><a class="btn btn-link fw-view-all fw-tickets-view-all" href="/support/search/tickets">View all</a></div>
+                                </div>
+                                <ul class="fw-no-bullet fw-search-results fw-tickets-search-results-container"></ul>
+                            </div>
+                        </div>
+
+                        <div class="fw-autocomplete-noresults text-center py-40 d-none">
+                            <img src="/assets/cdn/portal/images/no-results.png" class="img-fluid fw-no-results-img" alt="no results">
+                            <p class="mt-24 text-secondary">
+                                Sorry! nothing found for <br>
+                                <span id="input_term"><strong>"asd"</strong></span>
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+                {% comment %}
+              	{% assign search_text = 'portal_translations.banner.search_text' | t %}
+            	{{ portal | search_element: search_text }}
+              	{% endcomment %}
             </div>
         </div>
     </div>
