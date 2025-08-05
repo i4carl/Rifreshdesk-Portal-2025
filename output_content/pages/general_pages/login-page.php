@@ -29,8 +29,8 @@
     }
 </style>
 <section class="freshi4-container flex w-full flex-col relative min-h-[100vh] xl:flex-row">
-    <div class="main-details__wrapper flex flex-col xl:flex-row xl:flex-1 justify-center items-center gap-[38px] sm:gap-[86px] relative z-[1] min-h-[100vh]">
-        <div id="main-details__header" class="flex flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-center gap-6 !px-12 !py-6">
+    <div class="main-details__wrapper flex flex-col xl:flex-row xl:flex-1 justify-center items-center sm:gap-[86px] relative z-[1] min-h-[100vh]">
+        <div id="main-details__header" class="flex flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-center gap-6 !px-12 !py-12">
             <div class="w-full md:w-[525px] h-fit flex">
                 <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/Transparent.png" class="w-full h-full object-contain" alt="">
             </div>
@@ -98,7 +98,7 @@
                 </form>
             </div>
         </div>
-        <div id="forgetPassForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full d-none flex-col">
+        <div id="forgetPassForm" class="fw-loginform-wrapper w-full flex flex-1 xl:h-full d-none flex-col">
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
                 <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="relative new_user_session w-full flex flex-col !px-12 !py-6 !bg-[#145082] xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
                     <div class="absolute w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
@@ -221,6 +221,31 @@ input:-webkit-autofill:active{
                 passTokenInput.value = passwordToken;
             }
             }
+        }
+      
+        // Get the snippet output as a string
+        const agentLoginButton = `{% snippet agent_login %}`;
+
+        // Parse the HTML string into a DOM element
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = agentLoginButton.trim();
+
+        // Find the anchor with the text "Login here" (case-insensitive)
+        const loginLink = Array.from(tempDiv.querySelectorAll('a'))
+          .find(a => a.textContent.trim().toLowerCase() === 'login here');
+
+        if (loginLink) {
+          const loginHref = loginLink.getAttribute('href');
+
+          // Add event listener to the .agentloginbtn button
+          const agentBtn = document.querySelector('.agentloginbtn');
+          if (agentBtn) {
+            console.log(loginHref);
+            agentBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              window.location.href = loginHref;
+            });
+          }
         }
     })
 </script>
