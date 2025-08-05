@@ -37639,9 +37639,6 @@ label.group.active {
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
   .\!border-0 {
     border-style: var(--tw-border-style) !important;
     border-width: 0px !important;
