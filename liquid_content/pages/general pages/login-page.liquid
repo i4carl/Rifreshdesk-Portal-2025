@@ -30,7 +30,7 @@
 </style>
 <section class="freshi4-container flex w-full flex-col relative min-h-[100vh] xl:flex-row">
     <div class="main-details__wrapper flex flex-col xl:flex-row xl:flex-1 justify-center items-center gap-[38px] sm:gap-[86px] relative z-[1] min-h-[100vh]">
-        <div id="main-details__header" class="flex align-center flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-start gap-6 !px-12 !py-6">
+        <div id="main-details__header" class="flex flex-col xl:flex-1 sm:flex-row sm:!pt-30 xl:!pt-0 xl:h-[288px] justify-center items-center xl:items-center gap-6 !px-12 !py-6">
             <div class="w-full md:w-[525px] h-fit flex">
                 <img src="./assets/global/Transparent.png" class="w-full h-full object-contain" alt="">
             </div>
