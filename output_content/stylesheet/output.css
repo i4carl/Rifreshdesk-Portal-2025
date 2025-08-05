@@ -37837,6 +37837,9 @@ label.group.active {
   .bg-\[url\(\'\/2025\/rifreshdesk\/assets\/homepage\/homepage-banner\.png\'\)\] {
     background-image: url('/2025/rifreshdesk/assets/homepage/homepage-banner.png');
   }
+  .bg-\[url\(\'https\:\/\/cdn\.jsdelivr\.net\/gh\/i4carl\/Rifreshdesk-Portal-2025\@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206\/assets\/homepage\/homepage-banner\.jpg\'\)\] {
+    background-image: url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/homepage-banner.jpg');
+  }
   .bg-\[url\(\'https\:\/\/cdn\.jsdelivr\.net\/gh\/i4carl\/Rifreshdesk-Portal-2025\@9f52fb2cd5dab8cbf4763199bc3d427848f4438a\/assets\/global\/background-banner\.png\'\)\] {
     background-image: url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/background-banner.png');
   }
