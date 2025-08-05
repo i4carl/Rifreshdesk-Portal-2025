@@ -37,10 +37,11 @@
         </div>
         <div id="loginForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full flex flex-col">
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
-                <form class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-[#145082] xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full" id="new_user_session" novalidate="novalidate" action="/support/login" accept-charset="UTF-8" method="post">
+                <form class="relative new_user_session w-full flex flex-col !px-12 !py-6 xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full" id="new_user_session" novalidate="novalidate" action="/support/login" accept-charset="UTF-8" method="post">
+                    <div class="absolute w-full h-full bg-[url('/2025/rifreshdesk/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                     <input name="utf8" type="hidden" value="✓" />
                     <input type="hidden" name="authenticity_token" value="" />
-                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
+                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto relative z-[2]">
                         <label for="emailInput" class="group hover:!border-[#fff] focus-within:!border-[#fff] !flex !py-[12px] border-b border-[#fff] w-full gap-[10px] items-center">
                             <svg class="group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !text-[#fff] w-[20px] h-[20px]" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.50001 3H17.5C17.9603 3 18.3333 3.3731 18.3333 3.83333V17.1667C18.3333 17.6269 17.9603 18 17.5 18H2.50001C2.03977 18 1.66667 17.6269 1.66667 17.1667V3.83333C1.66667 3.3731 2.03977 3 2.50001 3ZM16.6667 6.5316L10.0598 12.4483L3.33334 6.51328V16.3333H16.6667V6.5316ZM3.75956 4.66667L10.0516 10.2183L16.2508 4.66667H3.75956Z" fill="currentColor"/>
@@ -93,15 +94,17 @@
                             
                         </a> -->
                     </div>
+                    <div class="absolute w-full h-full !bg-[#145082e6] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                 </form>
             </div>
         </div>
         <div id="forgetPassForm" class="fw-loginform-wrapper w-full flex-1 xl:h-full d-none flex-col">
             <div class="fw-form-section w-full flex-1 h-full flex flex-col">
-                <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="new_user_session w-full flex flex-col !px-12 !py-6 !bg-[#145082] xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
+                <form novalidate="novalidate" id="password_reset" accept-charset="UTF-8" method="post" class="relative new_user_session w-full flex flex-col !px-12 !py-6 !bg-[#145082] xl:min-w-[742px] xl:max-w-[48.30vw] flex-1 xl:h-full">
+                    <div class="absolute w-full h-full bg-[url('/2025/rifreshdesk/assets/global/background-banner.png')] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                     <input name="utf8" type="hidden" value="✓">
                     <input type="hidden" name="authenticity_token" value="">
-                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto">
+                    <div class="flex flex-col gap-6 w-full max-w-[485px] mx-auto xl:my-auto relative z-[2]">
                         <div class="flex flex-col gap-[14px]">
                             <p class="leading-[1.6] !font-semibold !text-[24.2px] !font-['Poppins',sans-serif] !text-white flex-1">
                                 Forgot password
@@ -117,7 +120,7 @@
                             <input type="email" name="email" id="email" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[14px] !leading-[1.6] !font-['Poppins',sans-serif] !text-[#fff] w-full" placeholder="Enter your email here!">
                         </label>
                         <div class="flex max-sm:flex-col sm:flex-wrap gap-6">
-                            <button type="submit" class="cool-animation-hover password-forgot-button flex-1 sm:shrink-1 sm:basis-[230.5px] !bg-[#4C93CF] items-center justify-center !py-[12px] !outline-none text-white !font-semibold !text-[14px] !font-['Poppins',sans-serif] flex !leading-[1.6] gap-[6px]">
+                            <button type="submit" class="!rounded-[8px] cool-animation-hover password-forgot-button flex-1 sm:shrink-1 sm:basis-[230.5px] !bg-[#4C93CF] items-center justify-center !py-[12px] !outline-none text-white !font-semibold !text-[14px] !font-['Poppins',sans-serif] flex !leading-[1.6] gap-[6px]">
                                 <div class="">
                                     Confirm reset password
                                 </div>
@@ -133,13 +136,14 @@
                                     </div>
                                 </div>
                             </button>
-                            <a href="#" id="loginFormLink" class="flex-1 sm:shrink-1 sm:basis-[230.5px] border !border-[#fff] items-center justify-center !py-[12px] !outline-none !text-[#fff] !font-semibold !text-[14px] !font-['Poppins',sans-serif] flex !leading-[1.6] gap-[6px]">
+                            <a href="#" id="loginFormLink" class="!rounded-[8px] flex-1 sm:shrink-1 sm:basis-[230.5px] border !border-[#fff] items-center justify-center !py-[12px] !outline-none !text-[#fff] !font-semibold !text-[14px] !font-['Poppins',sans-serif] flex !leading-[1.6] gap-[6px]">
                                 <div class="">
                                     Cancel
                                 </div>
                             </a>
                         </div>
                     </div>
+                    <div class="absolute w-full h-full !bg-[#145082e6] bg-cover bg-no-repeat bg-center top-0 left-0"></div>
                 </form>
             </div>
         </div>
