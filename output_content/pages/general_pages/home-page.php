@@ -35,7 +35,8 @@
     <div class="flex flex-col w-full min-h-[533px] relative p-9">
         <div class="absolute w-full h-full flex top-0 left-0">
             <div class="flex-1 h-full overflow-hidden">
-                <img src="./assets/homepage/homepage-banner.png" class="w-full object-contain" alt="">
+                <div class="w-full h-full bg-[url('/2025/rifreshdesk/assets/homepage/homepage-banner.png')] bg-fixed"></div>
+                <!-- <img src="./assets/homepage/homepage-banner.png" class="w-full object-contain" alt=""> -->
             </div>
             <div class="bg-[#000] w-[288px] h-full">
             </div>
@@ -83,6 +84,68 @@
                     </svg>
                     <input type="text" name="text" id="searchBar" class="autofill:bg-[#000] group-[.active]:!text-[#fff] group-hover:!text-[#fff] group-focus-within:!text-[#fff] !border-0 !outline-none !h-fit !text-[29.04px] !leading-[1.6] !font-['Open_sans',sans-serif] !text-[#777] w-full" placeholder="Enter the search term here...">
                 </label>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex p-6 py-18 gap-6">
+        <div class="gap-3 py-3 px-6">
+            <div class="flex gap-[14px]">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.37737 15.12H11.7826C11.8935 14.1107 12.4085 13.2775 13.2448 12.367C13.3389 12.2645 13.943 11.6394 14.0146 11.5501C14.7267 10.6622 15.12 9.5634 15.12 8.4C15.12 5.61648 12.8635 3.36 10.08 3.36C7.29647 3.36 5.03999 5.61648 5.03999 8.4C5.03999 9.56281 5.43289 10.661 6.14427 11.5487C6.21602 11.6382 6.82147 12.265 6.91448 12.3663C7.75122 13.2774 8.26645 14.1107 8.37737 15.12ZM11.76 16.8H8.39999V17.64H11.76V16.8ZM4.8333 12.5993C3.9114 11.4489 3.35999 9.98886 3.35999 8.4C3.35999 4.68864 6.36863 1.68 10.08 1.68C13.7914 1.68 16.8 4.68864 16.8 8.4C16.8 9.9897 16.2479 11.4505 15.3252 12.6012C14.8041 13.2508 13.44 14.28 13.44 15.54V17.64C13.44 18.5679 12.6878 19.32 11.76 19.32H8.39999C7.47215 19.32 6.71999 18.5679 6.71999 17.64V15.54C6.71999 14.28 5.35463 13.2498 4.8333 12.5993ZM10.92 8.40403H13.02L9.23998 13.444V10.084H7.13999L10.92 5.04V8.40403Z" fill="#111111"/>
+                </svg>
+                <div class="flex flex-col gap-[14px] font-['Open_sans',san-serif] text-[#111111]">
+                    <div class="leading-[1.15] font-bold text-base">
+                        Browse articles
+                    </div>
+                    <div class="text-sm leading-[1.6]">
+                        Explore How-To's and learn best practices from our knowledge base
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-3 py-3 px-6">
+            <div class="flex gap-[14px]">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.6401 17.64H2.52005C2.05614 17.64 1.68005 17.2639 1.68005 16.8V10.4889C1.68005 10.2461 1.78506 10.0152 1.96802 9.85572L5.04005 7.17725V3.36C5.04005 2.89608 5.41614 2.52 5.88005 2.52H17.6401C18.104 2.52 18.4801 2.89608 18.4801 3.36V16.8C18.4801 17.2639 18.104 17.64 17.6401 17.64ZM7.56005 15.96H10.0801V10.8709L6.72005 7.94137L3.36005 10.8709V15.96H5.88005V12.6H7.56005V15.96ZM11.7601 15.96H16.8001V4.2H6.72005V5.98692C6.91698 5.98692 7.11391 6.05588 7.27208 6.19378L11.4721 9.85572C11.6551 10.0152 11.7601 10.2461 11.7601 10.4889V15.96ZM13.4401 9.24H15.1201V10.92H13.4401V9.24ZM13.4401 12.6H15.1201V14.28H13.4401V12.6ZM13.4401 5.88H15.1201V7.56H13.4401V5.88ZM10.0801 5.88H11.7601V7.56H10.0801V5.88Z" fill="#111111"/>
+                </svg>
+                <div class="flex flex-col gap-[14px] font-['Open_sans',san-serif] text-[#111111]">
+                    <div class="leading-[1.15] font-bold text-base">
+                        Meet the community
+                    </div>
+                    <div class="text-sm leading-[1.6]">
+                        Set up your support portal, populate it with useful solutions, and create a dedicated ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-3 py-3 px-6">
+            <div class="flex gap-[14px]">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.6441 2.52C18.108 2.52 18.4841 2.89608 18.4841 3.36V7.98C17.3243 7.98 16.3841 8.92021 16.3841 10.08C16.3841 11.2398 17.3243 12.18 18.4841 12.18V16.8C18.4841 17.2639 18.108 17.64 17.6441 17.64H2.52408C2.06017 17.64 1.68408 17.2639 1.68408 16.8V12.18C2.84388 12.18 3.78408 11.2398 3.78408 10.08C3.78408 8.92021 2.84388 7.98 1.68408 7.98V3.36C1.68408 2.89608 2.06017 2.52 2.52408 2.52H17.6441ZM16.8041 4.2H3.36408V6.69312L3.49503 6.76122C4.61944 7.37608 5.39712 8.54574 5.45997 9.90208L5.46408 10.08C5.46408 11.5115 4.66832 12.7572 3.49503 13.3988L3.36408 13.466V15.96H16.8041V13.466L16.6731 13.3988C15.5487 12.784 14.771 11.6143 14.7082 10.2579L14.7041 10.08C14.7041 8.64847 15.4998 7.40281 16.6731 6.76122L16.8041 6.69312V4.2ZM13.4441 7.56V12.6H6.72408V7.56H13.4441Z" fill="#111111"/>
+                </svg>
+                <div class="flex flex-col gap-[14px] font-['Open_sans',san-serif] text-[#111111]">
+                    <div class="leading-[1.15] font-bold text-base">
+                        View all tickets
+                    </div>
+                    <div class="text-sm leading-[1.6]">
+                        Track all your ticket's progress and your interaction with the support teams
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-3 py-3 px-6">
+            <div class="flex gap-[14px]">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6 3.36H4.20002V16.8H15.96V6.72H12.6V3.36ZM2.52002 2.51311C2.52002 2.053 2.89591 1.68 3.35876 1.68H13.44L17.6398 5.88L17.64 17.6337C17.64 18.1011 17.2663 18.48 16.8056 18.48H3.35448C2.89362 18.48 2.52002 18.0975 2.52002 17.6469V2.51311ZM9.24002 12.6H10.92V14.28H9.24002V12.6ZM9.24002 5.88H10.92V10.92H9.24002V5.88Z" fill="#111111"/>
+                </svg>
+                <div class="flex flex-col gap-[14px] font-['Open_sans',san-serif] text-[#111111]">
+                    <div class="leading-[1.15] font-bold text-base">
+                        Submit a ticket
+                    </div>
+                    <div class="text-sm leading-[1.6]">
+                        Describe your issue by filling out the support ticket form
+                    </div>
+                </div>
             </div>
         </div>
     </div>
