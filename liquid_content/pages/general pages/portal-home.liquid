@@ -35,7 +35,7 @@
     <div class="flex flex-col w-full min-h-[533px] relative p-9">
         <div class="absolute w-full h-full flex top-0 left-0">
             <div class="flex-1 h-full overflow-hidden">
-                <div class="w-full h-full bg-[url('/2025/rifreshdesk/assets/homepage/homepage-banner.jpg')] bg-fixed bg-center"></div>
+                <div class="w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/homepage/homepage-banner.jpg')] bg-fixed bg-center"></div>
                 <!-- <img src="./assets/homepage/homepage-banner.png" class="w-full object-contain" alt=""> -->
                 <div class="bg-[#172964cc] w-full h-full top-0 left-0 absolute"></div>
             </div>
@@ -43,7 +43,7 @@
         <div class="flex flex-col w-full relative gap-30 z-[1]">
             <header class="w-full justify-between items-center flex">
                 <div id="portal-brand-wrapper" class="flex w-[133px] gap-6 shrink-0">
-                    <img src="./assets/global/PESO.png" class="w-full object-contain" alt="">
+                    <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@9f52fb2cd5dab8cbf4763199bc3d427848f4438a/assets/global/PESO.png" class="w-full object-contain" alt="">
                 </div>
                 <div class="menu-button cursor-pointer w-6 h-6 flex shrink-0 md:hidden">
                     <svg class="w-full h-full text-white" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
