@@ -36262,6 +36262,9 @@ label.group.active {
       max-width: 96rem;
     }
   }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .mx-0 {
     margin-inline: calc(var(--spacing) * 0);
   }
@@ -36618,6 +36621,9 @@ label.group.active {
   .bg-\[\#000\] {
     background-color: #000;
   }
+  .bg-\[\#111\] {
+    background-color: #111;
+  }
   .bg-\[\#145082\] {
     background-color: #145082;
   }
@@ -36665,6 +36671,9 @@ label.group.active {
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);

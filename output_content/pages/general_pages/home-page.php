@@ -298,6 +298,17 @@
                     </div>
                 </div>
                 <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[275px]">
+                    <div class="fw-folder-icon text-center w-15 h-15 object-cover rounded-lg bg-[#111] m-0 p-4 flex items-center justify-center">
+                        <span class="icon-folder text-[24px]"></span>
+                    </div>
+                    <div class="flex flex-col gap-[14px] text-left">
+                        <div class="font-bold text-[16.8px] leading-[1.1488] !font-['Lato',sans-serif]">Project Information</div>
+                        <div class="text-[14px] leading-[1.6] !font-['Poppins',sans-serif]">
+                            Learn more about Projects’ Information
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[275px]">
                     <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/project-information.jpg" class="w-15 h-15 object-cover rounded-lg" alt="">
                     <div class="flex flex-col gap-[14px] text-left">
                         <div class="font-bold text-[16.8px] leading-[1.1488] !font-['Lato',sans-serif]">Project Information</div>
