@@ -36475,6 +36475,12 @@ label.group.active {
   .min-w-\[275px\] {
     min-width: 275px;
   }
+  .min-w-\[650px\] {
+    min-width: 650px;
+  }
+  .min-w-\[700px\] {
+    min-width: 700px;
+  }
   .min-w-\[750px\] {
     min-width: 750px;
   }
