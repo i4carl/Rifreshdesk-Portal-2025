@@ -279,7 +279,7 @@
                 <div class="flex-1 bg-[#ffffffb3] h-[1px] opacity-[0.5]"></div>
             </div>
             <div class="px-0 sm:!px-6 py-3 gap-6 flex flex-wrap">
-                <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[275px]">
+                <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[750px]">
                     <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/technicalities.webp" class="w-15 h-15 object-cover rounded-lg" alt="">
                     <div class="flex flex-col gap-[14px] text-left">
                         <div class="font-bold text-[16.8px] leading-[1.1488] !font-['Lato',sans-serif]">Technicalities</div>
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[275px]">
+                <div class="flex-1 py-[30px] gap-6 flex h-[135px] text-white min-w-[750px]">
                     <img src="https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/Clients.webp" class="w-15 h-15 object-cover rounded-lg" alt="">
                     <div class="flex flex-col gap-[14px] text-left">
                         <div class="font-bold text-[16.8px] leading-[1.1488] !font-['Lato',sans-serif]">Clients List</div>
