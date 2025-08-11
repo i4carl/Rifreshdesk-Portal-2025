@@ -5,7 +5,7 @@
     // Sanitize page name to avoid directory traversal
     $footerpage = basename($footerpage);
 
-    if($footerpage != 'login-page' && $footerpage != 'home-page') {
+    if($footerpage != 'login-page' && $footerpage != 'home-page' && $footerpage != 'ticket-page') {
 ?>
 <header class="container-fluid px-0 fw-nav-wrapper fixed-top">
     <section class="bg-light container-fluid">
