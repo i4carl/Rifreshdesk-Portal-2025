@@ -58,7 +58,8 @@
     <div class="flex flex-col w-full min-h-[533px] relative p-9">
         <div class="absolute w-full h-full flex top-0 left-0">
             <div class="flex-1 h-full overflow-hidden">
-                <div class="w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/homepage-banner.jpg')] bg-fixed bg-center"></div>
+                <div class="w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/homepage-banner.jpg')] bg-fixed bg-center hidden"></div>
+                <div class="w-full h-full bg-[url('https://cdn.jsdelivr.net/gh/i4carl/Rifreshdesk-Portal-2025@4fab7ccd5ae0c6ec2eec5c85059ab9f2f1b90206/assets/homepage/homepage-banner-new.jpg')] bg-fixed bg-center"></div>
                 <!-- <img src="./assets/homepage/homepage-banner.png" class="w-full object-contain" alt=""> -->
                 <div class="bg-[#172964cc] w-full h-full top-0 left-0 absolute"></div>
             </div>
